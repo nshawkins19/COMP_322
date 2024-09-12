@@ -1,2 +1,1 @@
-# nshawkins.github.io
-# COMP 322
+### These are projects for COMP 322: Internet Systems
