@@ -1,0 +1,80 @@
+<!--
+HTML Box Model
+- border
+- padding
+- margin
+
+- A way to show white space: &nbsp (non-breaking space)
+- Less than: &lt;
+- Greater than &rt;
+
+
+HTML: Forms
+
+<form> 
+    for elements
+</form>
+- Form Attributes:
+    - action: path to script on the server that handles data from the form and sends info back to client
+    - method: format in which data is sent to the server and how the server sends info back to the client
+    - name ( or id)
+    - form elements used for communication with the server must include "action" and "method"
+- Input
+- Radio Box
+- Check box
+- Button
+- Dropdown
+- Textarea
+
+CSS: Cascading Style Sheet
+- Responsible for the design or style of a website, includin gthe layout, visual effects and background
+- In <head>
+    <style></style>
+    <link href = "xxx.css" type = "text/css" rel="stylesheet">
+
+    Example:
+    <style>
+    body {background-color: powderblue;}
+    h1{color:blue}
+    p{color: red;}
+</style>
+-->
+
+<!DOCTYPE html>
+<html>
+  <style>
+    .city {
+      background-color: tomato;
+      color: white;
+      border: 2px solid black;
+      margin: 20px;
+      padding: 20px;
+    }
+  </style>
+
+  <!--CSS Style Section-->
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="city">
+      <h2>London</h2>
+      <p>London is the capital of England.</p>
+    </div>
+    <p>"This is a less than sign: &lt;</p>
+    <br />
+
+    <p>This is another paragraph</p>
+
+    This is <del>deleted</del> text
+    <form name="test">
+      First name:<br />
+      <input type="text" name="firstname" value="Mickey" />
+      <br />
+      Last name:<br />
+      <input type="text" name="lastname" value="Mouse" />
+      <br /><br />
+      <input type="button" value="Submit" />
+    </form>
+  </body>
+</html>
