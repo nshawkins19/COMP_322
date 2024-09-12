@@ -1,0 +1,12 @@
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: white;
+  border: 2px solid white;
+  padding: 30px;
+  margin: 100px;
+}
