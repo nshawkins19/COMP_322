@@ -1,0 +1,75 @@
+<html>
+  <body>
+    <!--
+    <form name="test">
+      First name:<br />
+      <input type="text" name="firstname" value="Mickey" />
+      <br />
+      Last name: <br />
+
+      <input type="text" name="lastname" value="Mouse" />
+      <br /><br />
+      <input type="button" value="Submit" onclick="getInput()" />
+      <div id="output"></div>
+    </form>
+
+    <script>
+      function getInput() {
+        document.getElementById("output").innerHTML =
+          "Hello " +
+          document.test.firstname.value +
+          " " +
+          document.test.lastname.value;
+      }
+    </script>
+-->
+    <!--
+    <form name="test">
+      <p>
+        Enter some text: <br />
+        <textarea name="inText" rows="3" cols="15">
+ This is the default text. </textarea
+        >
+      </p>
+      <p>
+        The words you entered: <br />
+        <textarea name="outText" rows="10" cols="10">
+ This is where the words will appear.
+    </textarea
+        >
+        <br /><br />
+        <input type="button" value="Go!" onclick="fun();" />
+      </p>
+    </form>
+-->
+
+    <script>
+      function fun() {
+        document.getElementById("output1").innerHTML =
+          document.test.pwd.value + "<br>" + document.test.hidden.value;
+      }
+    </script>
+
+    <form name="test">
+      Enter your password:
+      <input type="password" name="pwd" />
+      <input type="hidden" name="hidden" value="cs" />
+      <br /><br />
+      <input type="button" value="Go" onclick="fun()" />
+      <input type="reset" value="Cancel" />
+      <div id="output1"></div>
+    </form>
+<form action="/action_page.php">
+<label for="cars">Choose a car:</label>
+<select name="ars" id="cars">
+
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+</select>
+<input type="submit" value="submit">
+
+</form>
+
+
+  </body>
+</html>
