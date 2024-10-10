@@ -1,5 +1,4 @@
 //Finish table calculations
-
 document.getElementById("calculator");
 //Math Section
 let x, y, operator, result, min, max, avg, total,count;
