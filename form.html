@@ -1,0 +1,83 @@
+<html>
+  <body>
+    <form name="userinfo">
+      <!--Username box-->
+      Username:
+      <input type="text" name="username" id="username" />
+      <br />
+      <br />
+      <!--Email box-->
+      Email:
+      <input type="email" name="email" id="email" />
+      <br />
+      <br />
+
+      <!--Phone number box-->
+      Phone Number:
+      <input type="text" name="phonenumber" id="phonenumber" />
+      <br />
+      <br />
+      <!--Enter Password box-->
+      Enter Password:
+      <input type="password" name="password" id="userpass" />
+      <br />
+      <br />
+      <!--Confirm Password box-->
+      Confirm Password:
+      <input type="password" name="passwordConfirm" id="passConfirm" />
+      <br />
+      <br />
+      <!--Gender Bubbles-->
+      Gender:
+      <input type="radio" name="gender" id="userFemale" value="Female"/>
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="userMale" value="Male"/>
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="userOther" value="Other"/>
+      <label for="other">Other</label>
+      <br />
+      <br />
+      <!--Age Group Dropdown-->
+        Age Group:
+        <select name="age" id="age">
+            <option value=""></option>
+            <option value="<21 years old">< 21 years old</option>
+            <option value="21 - 25 years old">21 - 25 years old</option>
+            <option value="26 - 35">26 - 35 years old</option>
+            <option value="36 - 50">36 - 50 years old</option>
+            <option value="> 50 years old">> 50 years old</option>
+        </select>
+        <br>
+        <br>
+
+      <!--Music Genre Checkbox-->
+      Favorite Music Genre:
+      <input type="checkbox" id="choice1" name="choice1" value="Pop" />
+      <label for="choice1">Pop</label>
+      <input type="checkbox" id="choice2" name="choice2" value="Hip-Hop" />
+      <label for="choice2">Hip-Hop</label>
+      <input type="checkbox" id="choice3" name="choice3" value="Jazz" />
+      <label for="choice3">Jazz</label>
+      <input type="checkbox" id="choice4" name="choice4" value="Rock" />
+      <label for="choice4">Rock</label>
+      <input
+        type="checkbox"
+        id="choice5"
+        name="choice5"
+        value="Classical Music"
+      />
+      <label for="choice5">Classical Music</label>
+      <input type="checkbox" id="choice6" name="choice6" value="Country" />
+      <label for="choice6">Country</label>
+      <br>
+      <br>
+
+
+      <!--Submit and Clear Buttons-->
+      <input type="submit" value="Submit">
+      <input type="Reset" value = "Clear">
+    </form>
+
+    <script src="validation.js"></script>
+  </body>
+</html>
