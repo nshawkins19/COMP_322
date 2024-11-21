@@ -1,0 +1,22 @@
+- Allows you to do more with less code
+- Must include as part of the text (it is a downloadable library)
+- The purpose of jQuery is to make it much easier to use Javascript on your own website
+
+- Features
+    * HTML/DOM manipulation
+    * CSS manipulation
+    * HTML event methods
+    * Effects and animations
+    * AJAX
+    * Utilities
+
+- Syntax:
+    -$(selector).action()
+Examples:
+$("p").hide*(); //hide all p elements
+$(".test").hide(); //hide all test elements
+
+
+$(document).ready(function(){
+    //Javascript code here
+});

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      #icon-block {
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      .website-icon {
+        height: 100px;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+      #status-container {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      #enlarged-icon {
+        height: 150px;
+        display: none;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="icon-block">
+      <span id="icon-span">
+        <img
+          src="a5/google-icon-2048x2048-pks9lbdv.png"
+          alt="Google"
+          class="website-icon"
+          data-url="https://www.google.com"
+        />
+        <img
+          src="a5/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023_929078-218.avif"
+          alt="Twitter"
+          class="website-icon"
+          data-url="https://www.twitter.com"
+        />
+        <img
+          src="a5/free-reddit-logo-icon-2436-thumb.png"
+          alt="Reddit"
+          class="website-icon"
+          data-url="https://www.reddit.com"
+        />
+        <img
+          src="a5/circle-linkedin-512.webp"
+          alt="Linkedin"
+          class="website-icon"
+          data-url="https://www.linkedin.com"
+        />
+        <img
+          src="a5/2021_Facebook_icon.svg.webp"
+          alt="Facebook"
+          class="website-icon"
+          data-url="https://www.facebook.com"
+        />
+        <img
+          src="a5/25231.png"
+          alt="Github"
+          class="website-icon"
+          data-url="https://www.github.com"
+        />
+      </span>
+    </div>
+    <div id="status-container">
+      <p>In: <span id="mouse-in"></span></p>
+      <p>Out: <span id="mouse-out"></span></p>
+      <p>Mouse X: <span id="mouse-x"></span>, Y: <span id="mouse-y"></span></p>
+    </div>
+    <img id="enlarged-icon" src="" alt="enlarged icon" />
+    <script>
+      $(document).ready(function () {
+        // Mouse enter event
+        $(".website-icon").on("mouseenter", function () {
+          $(this).css("opacity", 0.5);
+          $("#mouse-in").text($(this).attr("alt"));
+        });
+
+        // Mouse leave event
+        $(".website-icon").on("mouseleave", function () {
+          $(this).css("opacity", 1.0);
+          $("#mouse-out").text($(this).attr("alt"));
+        });
+
+        // Double click event
+        $(".website-icon").on("dblclick", function () {
+          window.open($(this).data("url"), "_blank");
+        });
+
+        // Click event
+        $(".website-icon").on("click", function (e) {
+          $(this).css("opacity", 0.5);
+          const $enlarged = $("#enlarged-icon");
+          $enlarged.attr("src", $(this).attr("src"));
+          $enlarged.css({
+            display: "block",
+          });
+
+          // Hide the enlarged icon after 2 seconds
+          setTimeout(() => {
+            $enlarged.hide();
+          }, 2000);
+        });
+
+        // Mouse move event for the span
+        $("#icon-span").on("mousemove", function (e) {
+          $("#mouse-x").text(e.pageX);
+          $("#mouse-y").text(e.pageY);
+        });
+      });
+    </script>
+  </body>
+</html>
