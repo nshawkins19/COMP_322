@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade API Tester</title>
+    <style>
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grade API Test Interface</h1>
+    <button onclick="makeRequest('GET')">get</button>
+    <button onclick="makeRequest('POST')">post</button>
+    <button onclick="makeRequest('PUT')">put</button>
+    <button onclick="makeRequest('DELETE')">delete</button>
+    <div id="response"></div>
+<!--Error Handling-->
+    <script>
+        function makeRequest(method) {
+            fetch('/grade', {
+                method: method
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('response').innerText = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
